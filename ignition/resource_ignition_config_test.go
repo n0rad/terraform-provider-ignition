@@ -270,7 +270,7 @@ func TestIgnitionConfigLuks(t *testing.T) {
 	 }
 
 	data "ignition_config" "test" {
-		disks = concat([data.ignition_luks.test.rendered],
+		luks = concat([data.ignition_luks.test.rendered],
 			var.ignition_luks_renders)
 	}
 	`, func(c *types.Config) error {
