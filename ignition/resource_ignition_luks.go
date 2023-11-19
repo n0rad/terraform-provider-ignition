@@ -165,7 +165,7 @@ func buildLuks(d *schema.ResourceData) (string, error) {
 			luks.Clevis.Threshold = &i
 		}
 		if custom, hasCustom := d.GetOk("clevis.0.custom"); hasCustom {
-			c := custom.(map[string]interface{})
+			c := custom.([]interface{})[0].(map[string]interface{})
 			if config, hasConfig := c["config"]; hasConfig {
 				str := config.(string)
 				luks.Clevis.Custom.Config = &str
@@ -176,7 +176,7 @@ func buildLuks(d *schema.ResourceData) (string, error) {
 				luks.Clevis.Custom.NeedsNetwork = &b
 			}
 
-			if pin, hasPin := c["oin"]; hasPin {
+			if pin, hasPin := c["pin"]; hasPin {
 				str := pin.(string)
 				luks.Clevis.Custom.Pin = &str
 			}
