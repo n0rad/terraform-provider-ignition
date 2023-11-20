@@ -16,6 +16,7 @@ func dataSourceLuks() *schema.Resource {
 				Type:     schema.TypeList,
 				Optional: true,
 				ForceNew: true,
+				MaxItems: 1,
 				Elem: &schema.Resource{
 					Schema: map[string]*schema.Schema{
 						"tang": {
@@ -56,6 +57,7 @@ func dataSourceLuks() *schema.Resource {
 							Type:     schema.TypeList,
 							ForceNew: true,
 							Optional: true,
+							MaxItems: 1,
 							Elem: &schema.Resource{
 								Schema: map[string]*schema.Schema{
 									"pin": {
@@ -88,6 +90,7 @@ func dataSourceLuks() *schema.Resource {
 				Type:     schema.TypeList,
 				Optional: true,
 				ForceNew: true,
+				MaxItems: 1,
 				Elem:     configReferenceResource,
 			},
 			"label": {
