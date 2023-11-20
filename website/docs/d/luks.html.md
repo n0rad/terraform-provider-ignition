@@ -82,7 +82,7 @@ The `custom` block supports:
 
 * `config` - (Optional) The clevis configuration JSON.
 
-* `needsNetwork` - (Optional) Whether or not the device requires networking.
+* `needs_network` - (Optional) Whether or not the device requires networking.
 
 
 ## Attributes Reference
