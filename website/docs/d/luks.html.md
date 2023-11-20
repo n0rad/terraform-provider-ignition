@@ -58,11 +58,9 @@ The `http_headers` block supports:
 
 * `value` - (Optional) The header contents.
 
-
 The `verification` block supports:
 
 * `hash` - (Optional) The hash of the key file, in the form <type>-<value> where type is either sha512 or sha256. If compression is specified, the hash describes the decompressed key file.
-
 
 The `clevis` block supports:
 
@@ -73,7 +71,6 @@ The `clevis` block supports:
 * `threshold` - (Optional) Sets the minimum number of pieces required to decrypt the device. Default is 1.
 
 * `custom` - (Optional) Overrides the clevis configuration. The pin & config will be passed directly to clevis luks bind. If specified, all other clevis options must be omitted.
-
 
 The `tang` block supports:
 
