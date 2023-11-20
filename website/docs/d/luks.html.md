@@ -48,7 +48,7 @@ The `key_file` block supports:
 
 * `compression` - (Optional) The type of compression used on the key file (null or gzip). Compression cannot be used with S3.
 
-* `httpHeaders` - (Optional) A list of HTTP headers to be added to the request. Available for http and https source schemes only.
+* `http_headers` - (Optional) A list of HTTP headers to be added to the request. Available for http and https source schemes only.
 
 * `verification` - (Optional) Options related to the verification of the key file.
 
