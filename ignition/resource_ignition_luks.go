@@ -86,6 +86,11 @@ func dataSourceLuks() *schema.Resource {
 				Required: true,
 				ForceNew: true,
 			},
+			"discard": {
+				Type:     schema.TypeBool,
+				Optional: true,
+				ForceNew: true,
+			},
 			"key_file": {
 				Type:     schema.TypeList,
 				Optional: true,

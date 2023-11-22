@@ -25,6 +25,7 @@ func TestIgnitionLuks(t *testing.T) {
 			name = "foo"
 			device = "/foo"
 			label = "FOO"
+			discard = true
 			open_options = ["there"]
 			options = ["aes"]
 			uuid = "uuid"
@@ -61,6 +62,10 @@ func TestIgnitionLuks(t *testing.T) {
 
 		if *a.Device != "/foo" {
 			return fmt.Errorf("device, found %q", *a.Device)
+		}
+
+		if !*a.Discard {
+			return fmt.Errorf("discard, found %t", *a.Discard)
 		}
 
 		if *a.Label != "FOO" {
