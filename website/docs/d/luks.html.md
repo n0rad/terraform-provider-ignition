@@ -28,6 +28,8 @@ The following arguments are supported:
 
 * `device` - (Required) The absolute path to the device. Devices are typically referenced by the /dev/disk/by-* symlinks.
 
+* `discard` - (Optional) Whether to issue discard commands to the underlying block device when blocks are freed. Enabling this improves performance and device longevity on SSDs and space utilization on thinly provisioned SAN devices, but leaks information about which disk blocks contain data. If omitted, it defaults to false.
+
 * `label` - (Optional) The label of the luks device.
 
 * `open_options` - (Optional) Any additional options to be passed to cryptsetup luksOpen. Supported options will be persistently written to the luks volume.
