@@ -58,7 +58,7 @@ The `http_headers` block supports:
 
 * `name` - (Required) The header name.
 
-* `value` - (Optional) The header contents.
+* `value` - (Required) The header contents.
 
 The `clevis` block supports:
 
