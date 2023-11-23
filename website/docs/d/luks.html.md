@@ -72,7 +72,7 @@ The `clevis` block supports:
 
 The `tang` block supports:
 
-* `url` - (Optional) Url of the tang server.
+* `url` - (Required) Url of the tang server.
 
 * `thumbprint` - (Optional) Thumbprint of a trusted signing key.
 
